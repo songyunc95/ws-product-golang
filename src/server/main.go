@@ -133,7 +133,7 @@ func uploadCounters() error {
 	// Saving counters to file (as a mock store)
 	// init file
 	f, err := os.Create("store.json")
-    if err != nil {
+   	if err != nil {
         return err
     }
 	defer f.Close()
@@ -148,8 +148,8 @@ func uploadCounters() error {
 	
 	// Save to file
 	_, err = f.WriteString(json_str)
-    if err != nil {
-        return err
+	if err != nil {
+		return err
     }	
 	
 	return nil
